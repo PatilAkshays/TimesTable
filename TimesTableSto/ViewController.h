@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+{
+    NSMutableArray *countArray;
+}
 
+@property (weak, nonatomic) IBOutlet UITextField *numberText;
+
+@property (weak, nonatomic) IBOutlet UITextField *limitText;
+@property (weak, nonatomic) IBOutlet UIButton *calButton;
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+- (IBAction)handlerCalculate:(id)sender;
 
 @end
 
